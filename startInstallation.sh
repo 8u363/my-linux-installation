@@ -30,3 +30,8 @@ fi
 if [[ $selected = *"$installAURHelper"* ]]; then
     source scripts/installAURHelper.sh
 fi
+
+
+if [[ $selected = *"$copyWallpaper"* ]]; then
+    source scripts/copyWallpaperRepository.sh
+fi
