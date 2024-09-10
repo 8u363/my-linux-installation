@@ -7,7 +7,7 @@ source library/commons.sh
 # -----------------------------------------------------
 
 # -----------------------------------------------------
-printInfo "update"
+printInfo "update packages"
 sudo pacman -Syu
 
 printInfo "install required packages"
