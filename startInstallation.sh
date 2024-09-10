@@ -10,5 +10,5 @@ printInfo "update"
 sudo pacman -Syu
 
 printInfo "install required packages"
-installPackagesWithPackman "figlet" " gum"
+installPackagesWithPackman "figlet" "gum"
 
