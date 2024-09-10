@@ -2,5 +2,5 @@
 
 printScriptHeader "pacman"
 
-sudo cp pacman.conf /etc/pacman.conf
+sudo cp scripts/pacman.conf /etc/pacman.conf
 sudo pacman -Syu
