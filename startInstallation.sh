@@ -21,8 +21,9 @@ printBanner "My Linux Arch Installation"
 configPacman="config pacman"
 installAURHelper="install AUR helper"
 installSoftware="install software"
+installServices="install services"
 copyWallpaper="copy Wallpaper"
-selected=$(gum choose "$configPacman" "$installAURHelper" "$installSoftware" "$copyWallpaper" --selected="$configPacman","$installAURHelper","$installSoftware","$copyWallpaper" --no-limit)
+selected=$(gum choose "$configPacman" "$installAURHelper" "$installSoftware" "$copyWallpaper" "$installServices" --selected="$configPacman","$installAURHelper","$installSoftware","$installServices" --no-limit)
 
 if [[ $selected = *"$configPacman"* ]]; then
     source scripts/configPacman.sh
@@ -34,6 +35,10 @@ fi
 
 if [[ $selected = *"$installSoftware"* ]]; then
     source scripts/installSoftware.sh
+fi
+
+if [[ $selected = *"$installServices"* ]]; then
+    source scripts/installServices.sh
 fi
 
 if [[ $selected = *"$copyWallpaper"* ]]; then
