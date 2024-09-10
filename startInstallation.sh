@@ -15,6 +15,12 @@ installPackagesWithPackman "figlet" "gum"
 # -----------------------------------------------------
 
 # -----------------------------------------------------
-printBanner "My Linux Installation"
+printBanner "My Linux Arch Installation"
+# -----------------------------------------------------
 
-source scripts/installAURHelper.sh
+installAURHelper="install AUR helper"
+selected=$(gum choose "$installAURHelper" --selected="$installAURHelper" --no-limit)
+
+if [[ $selected = *"$installAURHelper"* ]]; then
+    source scripts/installAURHelper.sh
+fi
