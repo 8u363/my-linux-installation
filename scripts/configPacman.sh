@@ -1,6 +1,6 @@
 #!/bin/bash
 
-printSmallBanner "pacman"
+printScriptHeader "pacman"
 
 sudo cp pacman.conf /etc/pacman.conf
 sudo pacman -Syu
