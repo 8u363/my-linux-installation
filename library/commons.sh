@@ -7,6 +7,8 @@ export COLOR_GREEN='\033[0;32m'
 export COLOR_RED=$'\033[0;31m'
 # -----------------------------------------------------
 
+# -----------------------------------------------------
+# OUTPUT FUNCTIONS
 printBanner(){
     echo -e "${COLOR_GREEN} "
     figlet -c -w 75 $1
@@ -25,7 +27,10 @@ printInfo(){
     echo ":: $1"
     echo -e "${COLOR_WHITE} "
 }
+# -----------------------------------------------------
 
+# -----------------------------------------------------
+# PACKAGE FUNCTIONS
 installPackagesWithPackman(){
     packages=();
     for pkg; do
@@ -34,3 +39,25 @@ installPackagesWithPackman(){
     
     sudo pacman -S --needed --noconfirm --color always "${packages[@]}";
 }
+# -----------------------------------------------------
+
+# -----------------------------------------------------
+# GIT FUNCTIONS
+cloneGitReposiotry(){    
+    gitRepoURL=$1
+    target=$2
+
+    if [ -d $target ];then
+        if gum confirm "$target exists already. Do you want to remove it?"; then
+            printInfo "remove $target"
+            rm -rf $target
+
+            printInfo "clone $gitRepoURL into $target"
+            git clone $gitRepoURL  $target
+        fi   
+    else
+        printInfo "clone $gitRepoURL into $target"
+        git clone $gitRepoURL $target
+    fi
+}
+# -----------------------------------------------------
