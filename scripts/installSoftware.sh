@@ -70,5 +70,5 @@ if [[ $software = *"aur packages"* ]]; then
     fi
 
     printInfo "install aur packages"
-    installPackagesWithPackman "${aurPackages[@]}"
+    installPackagesWithParu "${aurPackages[@]}"
 fi
