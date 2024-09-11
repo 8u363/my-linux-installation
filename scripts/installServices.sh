@@ -2,9 +2,9 @@
 
 printScriptHeader "services"
 
-gum spin --spinner line --title "which services should be installed?" -- sleep 2
+printInfo "which services should be installed?"
 
-services=$(gum choose "cups" "docker" "ssh" "ntp" "lightdm")
+services=$(gum choose "cups" "docker" "ssh" "ntp" "lightdm" --select-all --no-limit)
 echo $services
 
 # cups service
