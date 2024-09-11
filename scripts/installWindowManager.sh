@@ -28,7 +28,7 @@ printScriptHeader "window manager"
 printInfo "which window manager should be installed?"
 # -----------------------------------------------------
 
-services=$(gum choose "i3" "sway" --no-limit)
+services=$(gum choose "i3" "sway" --selected="i3","sway" --no-limit)
 
 if [[ $services = *"i3"* ]]; then
     printInfo "install i3 packages"
