@@ -2,6 +2,11 @@
 
 printScriptHeader "services"
 
+gum spin --spinner line "which services should be installed?" -- sleep 2
+
+services=$(gum choose "cups" "docker" "ssh" "ntp" "lightdm")
+echo $services
+
 # cups service
 printInfo "install cups service"
 installPackagesWithPackman "cups" "cups-pdf"
