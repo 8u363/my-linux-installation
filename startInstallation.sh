@@ -18,7 +18,7 @@ installPackagesWithPackman "figlet" "gum"
 printBanner "My Linux Arch Installation"
 # -----------------------------------------------------
 
-selected=$(gum choose "config pacman" "install software" "install services" "install window manager" "clone dotfiles" "clone wallpaper" --no-limit)
+selected=$(gum choose "config pacman" "install software" "install services" "install window manager" "clone dotfiles" "clone wallpaper" "cleanup" --no-limit)
 
 if [[ $selected = *"config pacman"* ]]; then
     source scripts/configPacman.sh
@@ -42,4 +42,8 @@ fi
 
 if [[ $selected = *"clone wallpaper"* ]]; then
     source scripts/cloneWallpaperRepository.sh
+fi
+
+if [[ $selected = *"cleanup"* ]]; then
+    source scripts/cleanup.sh
 fi
