@@ -4,31 +4,30 @@ printScriptHeader "services"
 
 printInfo "which services should be installed?"
 
-services=$(gum choose "cups" "docker" "ssh" "ntp" "lightdm" --selected="cups","docker","ssh","ntp","lightdm" --no-limit)
-echo $services
+services=$(gum choose "cups" "docker" "ssh" "ntp" "lightdm" --no-limit)
 
-# cups service
-printInfo "install cups service"
-installPackagesWithPackman "cups" "cups-pdf"
-sudo systemctl enable cups.service
+if [[ $services = *"cups"* ]]; then
+    installPackagesWithPackman "cups" "cups-pdf"
+    sudo systemctl enable cups.service
+fi
 
-# docker service
-printInfo "install docker service"
-installPackagesWithPackman "docker" "docker-compose"
-sudo systemctl enable docker.service
+if [[ $services = *"docker"* ]]; then
+    installPackagesWithPackman "docker" "docker-compose"
+    sudo systemctl enable docker.service
+fi
 
-# ssh service
-printInfo "install ssh service"
-installPackagesWithPackman "openssh"
-sudo systemctl enable sshd.service
+if [[ $services = *"ssh"* ]]; then
+    installPackagesWithPackman "openssh"
+    sudo systemctl enable sshd.service
+fi
 
-# ntp service
-printInfo "install ntp service"
-installPackagesWithPackman "ntp"
-sudo systemctl enable ntpd.service
-sudo ntpdate pool.ntp.org
+if [[ $services = *"ntp"* ]]; then
+    installPackagesWithPackman "ntp"
+    sudo systemctl enable ntpd.service
+    sudo ntpdate pool.ntp.org
+fi
 
-# lightdm service
-printInfo "install lightdm service"
-installPackagesWithPackman "lightdm" "lightdm-gtk-greeter"
-sudo systemctl enable lightdm.service
+if [[ $services = *"lightdm"* ]]; then
+    installPackagesWithPackman "lightdm" "lightdm-gtk-greeter"
+    sudo systemctl enable lightdm.service
+fi
