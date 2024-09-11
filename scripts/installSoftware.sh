@@ -1,6 +1,6 @@
 #!/bin/bash
 
-packages=(    
+pacmanPackages=(    
     "ansible"                           #
     "bitwarden"                         # secure and free password manager
     "brasero"                           # CD/DVD mastering tool
@@ -37,6 +37,38 @@ packages=(
     "zsh-completions"                   # additional completion definitions for Zsh
 )
 
+aurPackages=(
+    "brave-bin"                         # web browser
+    "joplin-desktop"                    # note and to-do application
+    "synology-drive"                    # synology sync
+    "zulu-21-bin"                       # Zulu builds of OpenJDK 
+)
+
 printScriptHeader "install software"
 
-installPackagesWithPackman "${packages[@]}"
+printInfo "which software packages should be installed?"
+
+software=$(gum choose "pacman packages" "aur packages" --no-limit)
+
+if [[ $software = *"pacman packages"* ]]; then
+    printInfo "install pacman packages"
+    installPackagesWithPackman "${pacmanPackages[@]}"
+fi
+
+if [[ $software = *"aur packages"* ]]; then
+
+    if pacman -Qs paru > /dev/null ; then
+        printInfo "paru is already installed"
+    else
+        printInfo "install paru"
+        cloneGitReposiotry "https://aur.archlinux.org/paru.git" "/tmp/paru" 
+
+        CURRENT_DIR=$(pwd)
+        cd /tmp/paru &&  makepkg -si --noconfirm
+        cd $CURRENT_DIR
+        rm -rf /tmp/paru
+    fi
+
+    printInfo "install aur packages"
+    installPackagesWithParu "${aurPackages[@]}"
+fi
