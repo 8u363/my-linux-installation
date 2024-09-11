@@ -1,9 +1,9 @@
 #!/bin/bash
 
 printScriptHeader "services"
+# -----------------------------------------------------
 
 printInfo "which services should be installed?"
-
 services=$(gum choose "cups" "docker" "ssh" "ntp" "lightdm" --no-limit)
 
 if [[ $services = *"cups"* ]]; then

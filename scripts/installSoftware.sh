@@ -44,10 +44,10 @@ aurPackages=(
     "zulu-21-bin"                       # Zulu builds of OpenJDK 
 )
 
-printScriptHeader "install software"
+printScriptHeader "software"
+# -----------------------------------------------------
 
 printInfo "which software packages should be installed?"
-
 software=$(gum choose "pacman packages" "aur packages" --no-limit)
 
 if [[ $software = *"pacman packages"* ]]; then
