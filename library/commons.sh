@@ -39,6 +39,15 @@ installPackagesWithPackman(){
     
     sudo pacman -S --needed --noconfirm --color always "${packages[@]}";
 }
+
+installPackagesWithParu(){
+    packages=();
+    for pkg; do
+        packages+=("${pkg}");
+    done;    
+
+    paru -S --needed --noconfirm --color always "${packages[@]}";
+}
 # -----------------------------------------------------
 
 # -----------------------------------------------------
