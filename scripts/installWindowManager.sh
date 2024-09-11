@@ -24,7 +24,9 @@ swayAURPackages=(
     "waypaper"                          # wallpaper setter for Wayland 
 )
 
+printScriptHeader "window manager"
 printInfo "which window manager should be installed?"
+# -----------------------------------------------------
 
 services=$(gum choose "i3" "sway" --no-limit)
 
