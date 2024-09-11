@@ -4,7 +4,7 @@ printScriptHeader "services"
 # -----------------------------------------------------
 
 printInfo "which services should be installed?"
-services=$(gum choose "cups" "docker" "ssh" "ntp" "lightdm" --no-limit)
+services=$(gum choose "cups" "docker" "ssh" "ntp" "lightdm" --selected="cups","docker","ssh","ntp","lightdm" --no-limit)
 
 if [[ $services = *"cups"* ]]; then
     printInfo "install and enable cups service"
