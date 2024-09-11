@@ -4,7 +4,7 @@ printScriptHeader "services"
 
 printInfo "which services should be installed?"
 
-services=$(gum choose "cups" "docker" "ssh" "ntp" "lightdm" --select-all --no-limit)
+services=$(gum choose "cups" "docker" "ssh" "ntp" "lightdm" --selected="cups","docker","ssh","ntp","lightdm" --no-limit)
 echo $services
 
 # cups service
