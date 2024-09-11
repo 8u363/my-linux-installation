@@ -18,24 +18,24 @@ installPackagesWithPackman "figlet" "gum"
 printBanner "My Linux Arch Installation"
 # -----------------------------------------------------
 
-configPacman="config pacman"
-installSoftware="install software"
-installServices="install services"
-copyWallpaper="copy Wallpaper"
-selected=$(gum choose "$configPacman" "$installSoftware" "$copyWallpaper" "$installServices" --selected="$configPacman","$installSoftware","$installServices" --no-limit)
+selected=$(gum choose "config pacman" "install software" "install services" "install window manager" "copy Wallpaper" --no-limit)
 
-if [[ $selected = *"$configPacman"* ]]; then
+if [[ $selected = *"config pacman"* ]]; then
     source scripts/configPacman.sh
 fi
 
-if [[ $selected = *"$installSoftware"* ]]; then
+if [[ $selected = *"install software"* ]]; then
     source scripts/installSoftware.sh
 fi
 
-if [[ $selected = *"$installServices"* ]]; then
+if [[ $selected = *"install window manager"* ]]; then
+    source scripts/installWindowManager.sh
+fi
+
+if [[ $selected = *"install services"* ]]; then
     source scripts/installServices.sh
 fi
 
-if [[ $selected = *"$copyWallpaper"* ]]; then
+if [[ $selected = *"copy Wallpaper"* ]]; then
     source scripts/copyWallpaperRepository.sh
 fi
