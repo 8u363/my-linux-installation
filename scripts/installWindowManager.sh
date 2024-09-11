@@ -17,6 +17,9 @@ swayPackages=(
     "sway"                              # compositor for Wayland
     "wofi"                              # command launcher
     "waybar"                            # status bar for Sway 
+)
+
+swayAURPackages=(
     "wlogout"                           # logout menu for wayland
     "waypaper"                          # wallpaper setter for Wayland 
 )
@@ -33,4 +36,5 @@ fi
 if [[ $services = *"sway"* ]]; then
     printInfo "install i3 packages"
     installPackagesWithPackman "${swayPackages[@]}"
+    installPackagesWithParu "${swayAURPackages[@]}"
 fi
