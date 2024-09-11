@@ -19,18 +19,13 @@ printBanner "My Linux Arch Installation"
 # -----------------------------------------------------
 
 configPacman="config pacman"
-installAURHelper="install AUR helper"
 installSoftware="install software"
 installServices="install services"
 copyWallpaper="copy Wallpaper"
-selected=$(gum choose "$configPacman" "$installAURHelper" "$installSoftware" "$copyWallpaper" "$installServices" --selected="$configPacman","$installAURHelper","$installSoftware","$installServices" --no-limit)
+selected=$(gum choose "$configPacman" "$installSoftware" "$copyWallpaper" "$installServices" --selected="$configPacman","$installSoftware","$installServices" --no-limit)
 
 if [[ $selected = *"$configPacman"* ]]; then
     source scripts/configPacman.sh
-fi
-
-if [[ $selected = *"$installAURHelper"* ]]; then
-    source scripts/installAURHelper.sh
 fi
 
 if [[ $selected = *"$installSoftware"* ]]; then
