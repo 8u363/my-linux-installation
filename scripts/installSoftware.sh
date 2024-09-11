@@ -48,7 +48,7 @@ printScriptHeader "software"
 # -----------------------------------------------------
 
 printInfo "which software packages should be installed?"
-software=$(gum choose "pacman packages" "aur packages" --no-limit)
+software=$(gum choose "pacman packages" "aur packages" --selected="pacman packages","aur packages" --no-limit)
 
 if [[ $software = *"pacman packages"* ]]; then
     printInfo "install pacman packages"
