@@ -2,6 +2,7 @@
 
 pacmanPackages=(    
     "ansible"                           #
+    "bash-completion"                   # programmable completion for the bash shell
     "bitwarden"                         # secure and free password manager
     "brasero"                           # CD/DVD mastering tool
     "btop"                              # monitor of system resources
