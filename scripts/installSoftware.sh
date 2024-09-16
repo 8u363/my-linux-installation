@@ -1,13 +1,16 @@
 #!/bin/bash
 
 pacmanPackages=(    
+    "alacritty"                         # terminal emulator     
     "ansible"                           #
     "bash-completion"                   # programmable completion for the bash shell
     "bitwarden"                         # secure and free password manager
     "brasero"                           # CD/DVD mastering tool
     "btop"                              # monitor of system resources
     "code"                              # visual Studio Code
+    "dmenu"                             # dynamic menu for X    
     "eza"                               # modern replacement for ls
+    "feh"                               # image viewer, used to set the background image    
     "filezilla"                         # FTP, FTPS and SFTP client  
     "fzf"                               # command-line fuzzy finde
     "gimp"                              # image manipulation program
@@ -23,6 +26,8 @@ pacmanPackages=(
     "networkmanager"                    #
     "network-manager-applet"            #
     "nm-connection-editor"              # networkManager GUI 
+    "picom"                             # standalone compositor for Xorg    
+    "qtile"                             # qtile display manager    
     "rpi-imager"                        # raspberry Pi Imaging Utility
     "thunderbird"                       # mail and news reader
     "thunderbird-i18n-de"               #
