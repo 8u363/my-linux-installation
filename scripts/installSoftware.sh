@@ -27,6 +27,7 @@ pacmanPackages=(
     "network-manager-applet"            #
     "nm-connection-editor"              # networkManager GUI 
     "picom"                             # standalone compositor for Xorg    
+    "python-pywal"                      # Generate and change colorschemes on the fly
     "qtile"                             # qtile display manager    
     "rpi-imager"                        # raspberry Pi Imaging Utility
     "thunderbird"                       # mail and news reader
