@@ -1,5 +1,13 @@
 #!/bin/bash
 
+qtilePackages=(
+    "alacritty"                         # terminal emulator 
+    "feh"                               # image viewer, used to set the background image
+    "dmenu"                             # dynamic menu for X
+    "picom"                             # standalone compositor for Xorg
+    "qtile"                             # qtile display manager
+)
+
 i3Packages=(
     "alacritty"                         # terminal emulator 
     "autotiling"                        # automatic switching horizontal / vertical window split orientation
@@ -28,7 +36,12 @@ printScriptHeader "window manager"
 printInfo "which window manager should be installed?"
 # -----------------------------------------------------
 
-services=$(gum choose "i3" "sway" --selected="i3","sway" --no-limit)
+services=$(gum choose "qtile" "sway" --selected="qtile","i3","sway" --no-limit)
+
+if [[ $services = *"qtile"* ]]; then
+    printInfo "install qtile packages"
+    installPackagesWithPackman "${qtilePackages[@]}"
+fi
 
 if [[ $services = *"i3"* ]]; then
     printInfo "install i3 packages"
