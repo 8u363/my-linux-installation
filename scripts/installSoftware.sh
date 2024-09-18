@@ -30,6 +30,7 @@ pacmanPackages=(
     "python-pywal"                      # Generate and change colorschemes on the fly
     "qtile"                             # qtile display manager    
     "rpi-imager"                        # raspberry Pi Imaging Utility
+    "rofi"
     "thunderbird"                       # mail and news reader
     "thunderbird-i18n-de"               #
     "ttf-jetbrains-mono-nerd"           # jetbrains font
