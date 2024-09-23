@@ -50,6 +50,7 @@ pacmanPackages=(
 aurPackages=(
     "brave-bin"                         # web browser
     "joplin-desktop"                    # note and to-do application
+    "qtile-extras"                      # Unofficial mods for qtile
     "synology-drive"                    # synology sync
     "zulu-21-bin"                       # Zulu builds of OpenJDK 
 )
