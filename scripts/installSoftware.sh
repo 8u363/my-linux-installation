@@ -28,6 +28,7 @@ pacmanPackages=(
     "nm-connection-editor"              # networkManager GUI 
     "picom"                             # standalone compositor for Xorg    
     "python-pip"                        # recommended tool for installing Python packages
+    "python-psutil"                     # cross-platform lib for process and system monitoring in Python.
     "python-pywal"                      # Generate and change colorschemes on the fly
     "qtile"                             # qtile display manager    
     "rpi-imager"                        # raspberry Pi Imaging Utility
