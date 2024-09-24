@@ -9,6 +9,7 @@ pacmanPackages=(
     "btop"                              # monitor of system resources
     "code"                              # visual Studio Code
     "dmenu"                             # dynamic menu for X    
+    "dunst"                             # notification-daemon
     "eza"                               # modern replacement for ls
     "feh"                               # image viewer, used to set the background image    
     "filezilla"                         # FTP, FTPS and SFTP client  
