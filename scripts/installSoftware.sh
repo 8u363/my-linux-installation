@@ -59,7 +59,7 @@ printScriptHeader "software"
 # -----------------------------------------------------
 
 printInfo "which software packages should be installed?"
-software=$(gum choose "pacman packages" "aur packages" --selected="pacman packages","aur packages" --no-limit)
+software=$(gum choose "pacman packages" "aur packages" "oh-my-zsh" --selected="pacman packages","aur packages","oh-my-zsh" --no-limit)
 
 if [[ $software = *"pacman packages"* ]]; then
     printInfo "install pacman packages"
@@ -82,4 +82,8 @@ if [[ $software = *"aur packages"* ]]; then
 
     printInfo "install aur packages"
     installPackagesWithParu "${aurPackages[@]}"
+fi
+
+if [[software = *"oh-my-zsh"* ]]; then
+    wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 fi
