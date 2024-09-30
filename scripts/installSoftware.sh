@@ -84,6 +84,6 @@ if [[ $software = *"aur packages"* ]]; then
     installPackagesWithParu "${aurPackages[@]}"
 fi
 
-if [[ software = *"oh-my-zsh"* ]]; then
+if [[ $software = *"oh-my-zsh"* ]]; then
     wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 fi
