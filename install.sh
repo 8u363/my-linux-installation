@@ -26,7 +26,7 @@ fi
 
 # -----------------------------------------------------
 if [[ $options = *"install paru"* ]]; then
-  source scripts/configPacman/configPacman.sh
+  source scripts/aur/installParu.sh
 fi
 
 #if [[ $selected = *"install software"* ]]; then
