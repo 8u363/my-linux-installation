@@ -29,11 +29,11 @@ if [[ $options = *"install paru"* ]]; then
   source scripts/aur/installParu.sh
 fi
 
-if [[ $selected = *"install services"* ]]; then
+if [[ $options = *"install services"* ]]; then
     source scripts/services/installServices.sh
 fi
 
-if [[ $selected = *"install software"* ]]; then
+if [[ $options = *"install software"* ]]; then
     source scripts/software/installSoftware.sh
 fi
 
