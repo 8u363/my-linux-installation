@@ -10,7 +10,10 @@ clear
 printInfo "update packages"
 sudo pacman -Syu
 
-#printInfo "install required packages"
+# -----------------------------------------------------
+printInfo "install required packages"
+installSoftware "figlet"
+
 #installPackagesWithPackman "figlet" "gum"
 # -----------------------------------------------------
 

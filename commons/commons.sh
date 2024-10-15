@@ -31,7 +31,7 @@ printInfo(){
 
 # -----------------------------------------------------
 # PACKAGE FUNCTIONS
-installPackagesWithPackman(){
+installSoftware(){
     packages=();
     for pkg; do
         packages+=("${pkg}");
