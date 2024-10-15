@@ -37,7 +37,7 @@ aurPackages=(
 printScriptHeader "software"
 
 printInfo "install packages with pacman"
-installPackagesWithPackman "${pacmanPackages[@]}"
+installSoftware "${pacmanPackages[@]}"
 
 if pacman -Qs paru >/dev/null; then
   installPackagesWithParu "${aurPackages[@]}"
