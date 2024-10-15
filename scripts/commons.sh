@@ -16,7 +16,6 @@ printBanner(){
 }
 
 printScriptHeader(){
-    echo
     echo -e "${COLOR_YELLOW} "
     figlet -c -w 75 -f  small $1
     echo -e "${COLOR_WHITE} "
