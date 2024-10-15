@@ -14,11 +14,8 @@ sudo pacman -Syu
 printInfo "install required packages"
 installSoftware "figlet"
 
-#installPackagesWithPackman "figlet" "gum"
 # -----------------------------------------------------
-
-# -----------------------------------------------------
-#printBanner "My Linux Arch Installation"
+printBanner "My Linux Arch Installation"
 # -----------------------------------------------------
 
 #selected=$(gum choose "config pacman" "install software" "install services" "clone dotfiles" "clone wallpaper" "cleanup" --no-limit)
