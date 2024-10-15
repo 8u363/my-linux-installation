@@ -17,19 +17,17 @@ installSoftware "figlet" "gum"
 # -----------------------------------------------------
 printBanner "My Linux Arch Installation"
 
-options=$(gum choose "config pacman" --no-limit)
+options=$(gum choose "config pacman" "install paru" --no-limit)
 
 # -----------------------------------------------------
 if [[ $options = *"config pacman"* ]]; then
-  printScriptHeader "pacman"
-  sudo cp scripts/pacman.conf /etc/pacman.conf
+  source scripts/configPacman/configPacman.sh
 fi
 
-
-
-#if [[ $selected = *"config pacman"* ]]; then
-#    source scripts/configPacman.sh
-#fi
+# -----------------------------------------------------
+if [[ $options = *"install paru"* ]]; then
+  source scripts/configPacman/configPacman.sh
+fi
 
 #if [[ $selected = *"install software"* ]]; then
 #    source scripts/installSoftware.sh
