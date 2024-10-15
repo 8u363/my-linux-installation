@@ -23,7 +23,7 @@ printScriptHeader(){
 }
 
 printInfo(){
-    echo -e "${COLOR_YELLOW} "
+    echo -e "${COLOR_GREEN} "
     echo ":: $1"
     echo -e "${COLOR_WHITE} "
 }
