@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # -----------------------------------------------------
-printScriptHeader "install paru"
+printScriptHeader "paru"
 
 if pacman -Qs paru > /dev/null ; then
   printInfo "paru is already installed"
