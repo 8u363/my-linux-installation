@@ -20,7 +20,7 @@ printBanner "My Linux Arch Installation"
 options=$(gum choose "config pacman" --no-limit)
 
 # -----------------------------------------------------
-if [[ options = *"config pacman"* ]]; then
+if [[ $options = *"config pacman"* ]]; then
   printScriptHeader "pacman"
   sudo cp scripts/pacman.conf /etc/pacman.conf
 fi
