@@ -12,13 +12,20 @@ sudo pacman -Syu
 
 # -----------------------------------------------------
 printInfo "install required packages"
-installSoftware "figlet"
+installSoftware "figlet" "gum"
 
 # -----------------------------------------------------
 printBanner "My Linux Arch Installation"
-# -----------------------------------------------------
 
-#selected=$(gum choose "config pacman" "install software" "install services" "clone dotfiles" "clone wallpaper" "cleanup" --no-limit)
+options=$(gum choose "config pacman" --no-limit)
+
+# -----------------------------------------------------
+if [[ options = *"config pacman"* ]]; then
+  printScriptHeader "pacman"
+  sudo cp scripts/pacman.conf /etc/pacman.conf
+fi
+
+
 
 #if [[ $selected = *"config pacman"* ]]; then
 #    source scripts/configPacman.sh
