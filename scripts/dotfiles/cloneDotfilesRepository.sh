@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # -----------------------------------------------------
-printScriptHeader "clone - dotfiles"
+printScriptHeader "dotfiles"
 
 DOTFILES_GIT="https://github.com/8u3631984/my-dotfiles.git"
 DOTFILES_DIR="/home/$USER/git/my-dotfiles"
