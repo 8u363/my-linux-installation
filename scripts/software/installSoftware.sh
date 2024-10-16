@@ -22,6 +22,7 @@ pacmanPackages=(
   "python-pywal"           # Generate and change colorschemes on the fly
   "qtile"                  # qtile display manager
   "rofi"
+  "stow"
   "ttf-jetbrains-mono-nerd" # jetbrains font
   "ttf-hack-nerd"           # hack font
   "wget"                    # network utility to retrieve files from the Web
