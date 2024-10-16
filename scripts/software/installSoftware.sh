@@ -40,5 +40,5 @@ printInfo "install packages with pacman"
 installSoftware "${pacmanPackages[@]}"
 
 if pacman -Qs paru >/dev/null; then
-  installPackagesWithParu "${aurPackages[@]}"
+  installAURSoftware "${aurPackages[@]}"
 fi

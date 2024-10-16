@@ -39,7 +39,7 @@ installSoftware(){
     sudo pacman -S --needed --noconfirm --color always "${packages[@]}";
 }
 
-installPackagesWithParu(){
+installAURSoftware(){
     packages=();
     for pkg; do
         packages+=("${pkg}");
@@ -51,12 +51,12 @@ installPackagesWithParu(){
 
 # -----------------------------------------------------
 # GIT FUNCTIONS
-cloneGitReposiotry(){    
+cloneGitRepository(){
     gitRepoURL=$1
     target=$2
 
     if [ -d $target ];then
-        if gum confirm "$target exists already. Do you want to remove it?"; then
+        if gum confirm "$target exists already. Do you want to replace it?"; then
             printInfo "remove $target"
             rm -rf $target
 
