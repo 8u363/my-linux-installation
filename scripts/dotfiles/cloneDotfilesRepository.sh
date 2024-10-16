@@ -9,4 +9,4 @@ CONFIG_DIRECTORY="/home/$USER/.config"
 printInfo "clone $DOTFILES_GIT to $DOTFILES_DIR"
 
 cloneGitRepository $DOTFILES_GIT $DOTFILES_DIR
-./$DOTFILES_DIR/install.sh
+stow config --adopt --dir $DOTFILES_DIR --target $CONFIG_DIRECTORY
