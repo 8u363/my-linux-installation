@@ -41,7 +41,7 @@ fi
 
 # -----------------------------------------------------
 if [[ $options = *"install additional software"* ]]; then
-    source scripts/software/installAdditionallSoftware.sh
+    source scripts/software/installAdditionalSoftware.sh
 fi
 
 # -----------------------------------------------------
