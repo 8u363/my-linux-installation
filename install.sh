@@ -55,6 +55,6 @@ if [[ $options = *"clone dotfiles"* ]]; then
 fi
 
 # -----------------------------------------------------
-if [[ $selected = *"cleanup"* ]]; then
+if [[ $options = *"cleanup"* ]]; then
     source scripts/cleanup/cleanup.sh
 fi
