@@ -8,7 +8,7 @@ if pacman -Qs paru > /dev/null ; then
 else
   printInfo "install paru"
 
-  cloneGitReposiotry "https://aur.archlinux.org/paru.git" "/tmp/paru"
+  cloneGitRepository "https://aur.archlinux.org/paru.git" "/tmp/paru"
   CURRENT_DIR=$(pwd)
   cd /tmp/paru &&  makepkg -si --noconfirm
   cd $CURRENT_DIR
