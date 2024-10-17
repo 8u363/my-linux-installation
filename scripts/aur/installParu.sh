@@ -12,5 +12,7 @@ else
   CURRENT_DIR=$(pwd)
   cd /tmp/paru &&  makepkg -si --noconfirm
   cd $CURRENT_DIR
+
+  printInfo "remove /tmp/paru"
   rm -rf /tmp/paru
 fi

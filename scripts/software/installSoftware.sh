@@ -38,7 +38,6 @@ aurPackages=(
 # -----------------------------------------------------
 printScriptHeader "software"
 
-printInfo "install packages with pacman"
 installSoftware "${pacmanPackages[@]}"
 
 if pacman -Qs paru >/dev/null; then
