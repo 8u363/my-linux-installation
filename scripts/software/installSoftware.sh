@@ -16,6 +16,7 @@ pacmanPackages=(
   "net-tools"              # configuration tools for Linux networking
   "networkmanager"         #
   "network-manager-applet" #
+  "nitrogen"               # setter for x windows
   "nm-connection-editor"   # networkManager GUI
   "picom"                  # standalone compositor for Xorg
   "python-pip"             # recommended tool for installing Python packages
