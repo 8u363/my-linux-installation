@@ -32,7 +32,8 @@ pacmanPackages=(
 )
 
 aurPackages=(
-  "qtile-extras" # Unofficial mods for qtile
+  "qtile-extras"            # Unofficial mods for qtile
+  "checkupdates-with-aur"   # Helper script to check updates, including AUR updates
 )
 
 # -----------------------------------------------------
