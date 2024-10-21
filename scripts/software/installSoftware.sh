@@ -26,6 +26,7 @@ pacmanPackages=(
   "stow"
   "ttf-jetbrains-mono-nerd" # jetbrains font
   "ttf-hack-nerd"           # hack font
+  "ttf-nerd-fonts-symbols"  # High number of extra glyphs from popular 'iconic fonts'
   "wget"                    # network utility to retrieve files from the Web
   "zsh"                     # command interpreter (
   "zsh-completions"         # additional completion definitions for Zsh
