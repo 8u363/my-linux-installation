@@ -1,3 +1,12 @@
-# my-linux-installation
+# My Linux Arch Installation
 
-![screenshot.png](screenshot.png)
+## Start installation
+
+```install.sh```
+
+select the installation options
+![/installationOptions](screenshots/installationOptions.png)
+
+## Final result
+
+![screenshot.png](screenshots/screenshot.png)
