@@ -26,6 +26,7 @@ pacmanPackages=(
 
 aurPackages=(
     "brave-bin"                         # web browser
+    "betterlockscreen"                  # lock screen
     "joplin-app-image"                  # note and to-do application
     "synology-drive"                    # synology sync
     "zulu-21-bin"                       # Zulu builds of OpenJDK
