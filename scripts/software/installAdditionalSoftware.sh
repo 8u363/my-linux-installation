@@ -1,6 +1,7 @@
 #!/bin/bash
 
 pacmanPackages=(
+    "alsa-utils"                        # Advanced Linux Sound Architecture - Utilities
     "bitwarden"                         # secure and free password manager
     "brasero"                           # CD/DVD mastering tool
     "code"                              # visual Studio Code
