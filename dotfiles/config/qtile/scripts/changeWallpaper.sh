@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # set a random wallpaper
-feh --bg-scale --randomize ~/git/my-wallpaper/art
+feh --bg-scale --randomize ~/git/my-wallpaper/
 
 # get last set deskcop wallpaper
 wallpaper="$(cat "${HOME}/.fehbg" | awk -F "'" '{print $2}')"
