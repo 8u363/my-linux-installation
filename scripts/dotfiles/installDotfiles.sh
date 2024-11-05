@@ -3,7 +3,7 @@
 # -----------------------------------------------------
 printScriptHeader "dotfiles"
 
-DOTFILES_DIR="../../dotfiles/"
+DOTFILES_DIR="./dotfiles/"
 CONFIG_DIRECTORY="/home/$USER/.config"
 
 mkdir -p $CONFIG_DIRECTORY
