@@ -43,6 +43,5 @@ if pacman -Qs paru >/dev/null; then
   installAURSoftware "${aurPackages[@]}"
 fi
 
-
-printInfo "install my zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#printInfo "install my zsh"
+#sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
