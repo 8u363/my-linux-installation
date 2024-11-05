@@ -17,7 +17,7 @@ installSoftware "figlet" "gum"
 # -----------------------------------------------------
 printBanner "My Linux Arch Installation"
 
-options=$(gum choose "config pacman" "install paru" "install services" "install software" "install additional software" "clone dotfiles" "cleanup" --selected="config pacman","install paru","install services","install software","clone wallpaper","cleanup" --no-limit)
+options=$(gum choose "config pacman" "install paru" "install services" "install software" "install additional software" "install dotfiles" "cleanup" --selected="config pacman","install paru","install services","install software","install additional software","install dotfiles","cleanup" --no-limit)
 
 # -----------------------------------------------------
 if [[ $options = *"config pacman"* ]]; then
@@ -45,8 +45,8 @@ if [[ $options = *"install additional software"* ]]; then
 fi
 
 # -----------------------------------------------------
-if [[ $options = *"clone dotfiles"* ]]; then
-    source scripts/dotfiles/cloneDotfilesRepository.sh
+if [[ $options = *"install dotfiles"* ]]; then
+    source scripts/dotfiles/installDotfiles.sh
 fi
 
 # -----------------------------------------------------
