@@ -10,4 +10,4 @@ mkdir -p $CONFIG_DIRECTORY
 stow config --adopt --dir $DOTFILES_DIR --target $CONFIG_DIRECTORY
 
 cp $DOTFILES_DIR/zshenv ~/.zshenv
-sudo chsh $USER -s /bin/zsh
+sudo chsh $USER -s $(which zsh)
