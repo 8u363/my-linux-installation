@@ -1,6 +1,7 @@
 #!/bin/bash
 
 pacmanPackages=(
+  "arandr"                 # a simple visual front end for XRandR
   "alacritty"              # terminal emulator
   "ansible"                #
   "bash-completion"        # programmable completion for the bash shell
@@ -34,8 +35,10 @@ pacmanPackages=(
 )
 
 aurPackages=(
+  
   "qtile-extras"            # Unofficial mods for qtile
   "checkupdates-with-aur"   # Helper script to check updates, including AUR updates
+  "zsh-theme-powerlevel10k" # Powerlevel10k is a theme for Zsh
 )
 
 # -----------------------------------------------------
