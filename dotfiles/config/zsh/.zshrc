@@ -10,4 +10,6 @@ autoload -U promptinit && promptinit
 
 prompt walters
 
+alias ll="eza -lh --total-size"
+
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
