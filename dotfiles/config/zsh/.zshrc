@@ -11,5 +11,6 @@ autoload -U promptinit && promptinit
 prompt walters
 
 alias ll="eza -lh --total-size"
+alias lla="eza -lah --total-size"
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
