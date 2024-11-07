@@ -1,3 +1,5 @@
+fastfetch
+
 
 # history
 HISTSIZE=110000
